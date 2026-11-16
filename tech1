@@ -1,11 +1,6 @@
 class Solution {
     public long flowerGame(int n, int m) {
-      long count =0;         // we can solve this sum using return (n*m)/2  only this much gv u corrct and same answer
-      for(int x=1;x<=n;x++){
-        for (int y=1;y<=m;y++){
-            count +=(x+y)%2;
-        }
-      }
-      return (count);
+         
+      return (long)n*m/2;
     }
 }
