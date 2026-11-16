@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number of elements:");
+        int arraysize = sc.nextInt();
+        int[] nums = new int[arraysize];
+        System.out.println("Enter the array:");
+        for (int i = 0; i < arraysize; i++) {
+            nums[i] = sc.nextInt();
+        }
+        int min = nums[0], max = nums[0], sum = 0;
+        for (int x : nums) {
+            if (x < min) min = x;
+            if (x > max) max = x;
+            sum += x;
+        }
+        System.out.printf(" %d %d %d", min, max, sum);
+       
+    }
+}
