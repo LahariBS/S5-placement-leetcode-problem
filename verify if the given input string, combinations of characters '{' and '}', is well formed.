@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class main {
+    public static void main(String []args){
+        int balance=0;
+        
+        Scanner sc= new Scanner (System.in);
+        String path=sc.nextLine();
+        for (char x: path.toCharArray()){
+            if(x=='{')  balance++;
+            else if(x=='}') balance--;
+            if (balance <0)break;
+        }
+        if(balance==0)
+        System.out.println("matching") ;
+        else 
+        System.out.println("not matching") ;
+    }
+}
+//verify if the given input string, combinations of characters '{' and '}', is well formed.
+Example:
+
+1. {} - Matching
+2. {{}} - Matching
+3. {}{} - Matching
+4. {}}{ - Not Matching
