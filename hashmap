@@ -1,0 +1,19 @@
+
+import java.util.HashMap;
+class Main {
+    public static void main(String[] args) {
+        
+       String text="lahari";
+        char[] chars = text.toCharArray();
+        
+        HashMap <Character,Integer> hp=new HashMap <>();
+        
+        for(char c : chars){
+            int exitingcount=hp.getOrDefault(c,0);
+            hp.put(c,exitingcount + 1);
+        }
+        for (char c :  hp.keySet()){
+            System.out.println(c+" : "+ hp.get(c));
+        }
+    }
+}
