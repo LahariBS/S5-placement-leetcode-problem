@@ -1,0 +1,14 @@
+class Main {
+    public static void main(String[] args) {
+        String s =new String("hello world");
+         String[] words= s.split(" ");
+        System.out.println(s);
+        for(String word : words) {
+       for(int i =word.length()-1;i>=0;i--){
+           System.out.print(word.charAt(i));
+       }
+            System.out.print(" ");
+      }
+               
+    }
+}
